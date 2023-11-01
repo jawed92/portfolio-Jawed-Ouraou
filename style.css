@@ -228,7 +228,6 @@ ul {
     box-shadow: 0 5px 10px 3px rgba(208, 208, 211, 0.288);
     border-radius: 12px;
     text-align: center;
-    padding: 5rem 1.5625rem 1.875rem;
 }
 
 .card-container {
@@ -259,6 +258,11 @@ ul {
 .body-card {
     position: relative;
     bottom: 110px;
+}
+
+.technologies-list {
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .techno-item {
@@ -373,13 +377,6 @@ ul {
     margin-bottom: 1.875rem;
 }
 
-.works .row {
-    margin: 0 -0.9375rem;
-}
-
-.works div[class^=col] {
-    padding: 0 15px;
-}
 
 .works-nav {
     margin: 0 auto 3em auto;
@@ -416,7 +413,8 @@ ul {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 3rem;
+    margin: 45px;
 }
 
 .card-portfolio {
@@ -479,4 +477,18 @@ ul {
     cursor: pointer;
     line-height: 1.33;
     font-size: 1.125rem;
+}
+
+/*** CONTACT ***/
+
+.container-contact {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contact-title {
+    width: 100%;
+    text-align: center;
+    color: #222288;
 }
