@@ -11,7 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500&family=Roboto:wght@300;400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e91c07ac0e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./style.css">
     <!--OG data-->
@@ -43,9 +44,6 @@
     <div class="banner">
         <div class="container banner-container">
             <div id="text-banner" class="text-banner" role="heading" aria-level="1">
-                <h1 class="h1-content no-after">Bonjour !</h1>
-                <h1 class="h1-content no-after">Je suis Jawed Ouraou</h1>
-                <h1 class="h1-content no-after">développeur front-end</h1>
             </div>
             <div class="portrait-banner"><img src="assets/images/developer.png" data-src="assets/images/developer.png"
                     alt="Avatar">
@@ -89,6 +87,7 @@
     <section class="services">
         <h2 class="service-title">Mes services</h2>
         <div class="services-cont">
+
             <div class="card-container">
                 <div class="card-service">
                     <div class="card-service-picto picto-dev">
@@ -112,16 +111,12 @@
 
             <div class="card-container">
                 <div class="card-service">
-
                     <div class="card-service-picto">
                         <i class="fal fa-database"></i>
                     </div>
                     <div class="body-card">
-
                         <h3 class="title-card-service">Backend Notions</h3>
-
                         <p>Mongoose, MongoDB, Express: Outils essentiels pour le développement backend.</p>
-
                         <h4 class="title-card-rond">Outils utilisés</h4>
                         <ul class="technologies-list">
                             <li class="techno-item">Node.js</li>
@@ -133,8 +128,7 @@
                 </div>
             </div>
         </div>
-        <a href="https://agathe-plunian.com/wp-content/themes/portfolio-new/images/cv/Agathe_Plunian_CV_UI_UX.pdf"
-            download="Jawed-Ouraou-CV" class="btn btn-primary">Télécharger mon CV</a>
+        <a href="" download="Jawed-Ouraou-CV" class="btn btn-primary">Télécharger mon CV</a>
         </div>
     </section>
 
@@ -142,21 +136,13 @@
     <section class="works">
         <div class="container">
             <h2 class="works-title">Réalisations</h2>
-            <div>
-                <ul class="works-nav">
-                    <li id="webdesign" class="btn-choice">Frontend</li>
-                    <li id="webdev" class="btn-choice">Développement Web</li>
-                    <li id="illustration" class="btn-choice">Illustration </li>
-                </ul>
-            </div>
         </div>
 
         <!--PORTFOLIO WEB DESIGN-->
         <div class="grid">
             <div>
-                <a class="card-portfolio" style=" background-image: url('./assets/images/booki.png')"
-                    data-modal-id="modal-design-0">
-
+                <a class="card-portfolio " style="background-image: url(./assets/images/booki.png)"
+                    data-bs-toggle="modal" data-bs-target="#modal-design-0" data-back="./assets/images/booki.png">
                     <div class="hover-card">
                         <div class="title-hover">Projet d'étude Booki</div>
                         <div class="see-more" data-modal="modal-design-0">
@@ -168,6 +154,7 @@
             </div>
             <div>
                 <a class="card-portfolio " style="background-image: url('./assets/images/Portofolio Sofie Bluel.png')"
+                    data-bs-toggle="modal" data-bs-target="#modal-design-1"
                     data-back="./assets/images/Portofolio Sofie Bluel.png">
                     <div class="hover-card">
                         <div class="title-hover">Création d'une page web dynamique avec JavaScript</div>
@@ -179,6 +166,7 @@
             </div>
             <div>
                 <a class="card-portfolio " style="background-image: url(./assets/images/nina-carducci.png)"
+                    data-bs-toggle="modal" data-bs-target="#modal-design-2"
                     data-back="./assets/images/nina-carducci.png">
                     <div class="hover-card">
                         <div class="title-hover">Débuggez et optimisez un site de photographe</div>
@@ -190,7 +178,7 @@
             </div>
             <div>
                 <a class="card-portfolio " style="background-image: url(./assets/images/kasa.png)"
-                    data-back="./assets/images/kasa.png">
+                    data-bs-toggle="modal" data-bs-target="#modal-design-3" data-back="./assets/images/kasa.png">
                     <div class="hover-card">
                         <div class="title-hover">Création d'une application web avec React </div>
                         <div class="see-more">
@@ -203,11 +191,10 @@
         </div>
         <!-- Modal -->
         <!-- Modal Illu -->
-        <div class="modal fade modal-design" id="modal-design-0" tabindex="-1" style="display: none;"
-            aria-hidden="true">
+        <div class="modal fade modal-design" id="modal-design-0" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <button type="button" class="btn-close" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body">
                         <h2 class="project-title project-title-sm"> Projet d'étude Booki</h2>
                         <div class="row">
@@ -255,61 +242,60 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade modal-design" id="modal-design-1" tabindex="-1" style="display: none;"
-            aria-hidden="true">
+        <div class="modal fade modal-design" id="modal-design-1" tabindex="-1" aria-hidden="true"
+            style="display: none;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     <div class="modal-body">
                         <h2 class="project-title project-title-sm"> Création d'une page web dynamique
-                            avec JavaScript</h2>
+                            avec
+                            JavaScript</h2>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="img-container "
-                                    style="background-image: url(./assets/images/Portofolio\ Sofie\ Bluel.png);">
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="modal-text">
-                                        <h2 class="project-title"> Création d'une page web dynamique
-                                            avec
-                                            JavaScript</h2>
-                                        <div class="project-date">Année: <span>2023</span></div>
-                                        <div class="project-descr">
-                                            <div class="mission-title">Mission:</div>
-                                            <div class="mission-content">
-                                                <p>Gérer les événements utilisateurs avec JavaScript</p>
-                                                <p>Manipuler les éléments du DOM avec JavaScript
-                                                </p>
-                                                <p>Récupérer les données utilisateurs dans le JavaScript
-                                                    via
-                                                    des formulaires</p>
-                                                <p>Optimiser les performances d’un site web
-                                                </p>
-                                                <p>Débugger un site web grâce aux Chrome DevTools
-                                                </p>
-                                                <p>Rédiger un cahier de recette pour tester un site</p>
-                                            </div>
+                                <div class="img-container"
+                                    style="background-image: url(./assets/images/Portofolio\ Sofie\ Bluel.png);"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="modal-text">
+                                    <h2 class="project-title"> Création d'une page web dynamique
+                                        avec
+                                        JavaScript</h2>
+                                    <div class="project-date">Année: <span>2023</span></div>
+                                    <div class="project-descr">
+                                        <div class="mission-title">Mission:</div>
+                                        <div class="mission-content">
+                                            <p>Gérer les événements utilisateurs avec JavaScript</p>
+                                            <p>Manipuler les éléments du DOM avec JavaScript
+                                            </p>
+                                            <p>Récupérer les données utilisateurs dans le JavaScript
+                                                via
+                                                des formulaires</p>
+                                            <p>Optimiser les performances d’un site web
+                                            </p>
+                                            <p>Débugger un site web grâce aux Chrome DevTools
+                                            </p>
+                                            <p>Rédiger un cahier de recette pour tester un site</p>
                                         </div>
-                                        <div class="techos">
-                                            <div class="techno-title">Technologies utilisées</div>
-                                            <ul class="technologies-list">
-                                                <li class="techno-item">JavaScript</li>
-                                            </ul>
-                                        </div>
+                                    </div>
+                                    <div class="techos">
+                                        <div class="techno-title">Technologies utilisées</div>
+                                        <ul class="technologies-list">
+                                            <li class="techno-item">JavaScript</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="more-img">
-                                <div class="grid grid-1">
-                                    <div class="grid-sizer"></div>
-                                    <div class="gutter-sizer"></div>
-
-                                    <div class="grid-item">
-                                        <img src="./assets/images/sofie-modale (1).png" />
-                                    </div>
-                                    <div class="grid-item">
-                                        <img src="./assets/images/sofie-modale (2).png" />
-                                    </div>
+                        </div>
+                        <div class="more-img">
+                            <div class="grid grid-3">
+                                <div class="grid-sizer"></div>
+                                <div class="gutter-sizer"></div>
+                                <div class="grid-item">
+                                    <img src="./assets/images/sofie-modale (1).png" />
+                                </div>
+                                <div class="grid-item">
+                                    <img src="./assets/images/sofie-modale (2).png" />
                                 </div>
                             </div>
                         </div>
@@ -459,6 +445,7 @@
             </div>
         </div>
     </section>
+
     <!--CONTACT-->
     <section id="contact" class="contact">
         <div class="container-contact">
@@ -467,10 +454,8 @@
                 <div class="contact-text">
                     <p>N'hésitez pas à me contacter :</p>
                     <ul>
-                        <li>Par téléphone : <a href="tel:VOTRE_NUMERO_DE_TÉLÉPHONE">VOTRE_NUMERO_DE_TÉLÉPHONE</a></li>
-                        <li>Par e-mail : <a href="mailto:VOTRE_ADRESSE_EMAIL">VOTRE_ADRESSE_EMAIL</a></li>
-                        <li>Suivez-moi sur <a href="LIEN_VERS_VOTRE_RÉSEAU_SOCIAL"
-                                target="_blank">NOM_DU_RÉSEAU_SOCIAL</a></li>
+                        <li>Par téléphone : <a href="tel:0781543121">0781543121</a></li>
+                        <li>Par e-mail : <a href="mailto:jawed.ouraou@gmail.com">jawed.ouraou@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -478,18 +463,19 @@
     </section>
     <!-- FOOTER -->
     <footer class="main-footer">
-        <div class="container">
+        <div class="container-footer">
             <div class="icons-container">
-                <a class="icon-social-media icon-github" href="https://github.com/AgathePlunian" target="_blank"> </a>
-                <a class="icon-social-media icon-linkedin" href="https://www.linkedin.com/in/agathe-plunian/"
-                    target="_blank"> </a>
-                <a class="icon-social-media icon-instagram" href="https://www.instagram.com/agatheplunianillustration/"
-                    target="_blank"> </a>
+                <a class="icon-social-media icon-github" href="https://github.com/jawed92" target="_blank"><i
+                        class="fa-brands fa-github"></i> </a>
+                <a class="icon-social-media icon-linkedin" href="https://www.linkedin.com/in/jawed-ouraou/"
+                    target="_blank"> <i class="fa-brands fa-linkedin"></i></a>
             </div>
             <div class="realized-by">Réalisé par Jawed Ouraou</div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <!-- <script type="module" src="./portfolio.js"></script> -->
     <script type="module" src="./function.js"></script>
 </body>
