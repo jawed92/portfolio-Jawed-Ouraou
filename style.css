@@ -257,6 +257,12 @@ ul {
     font-weight: 500;
 }
 
+.btn-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
 .card-service-picto.picto-illustration {
     background-color: #fea6b5;
 }
